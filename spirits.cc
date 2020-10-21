@@ -97,7 +97,7 @@ int main(int argc, char** argv)
 	const std::string domain{ "spirit.vietnamairlines.com" };
 
 	// Parses config (the lazy way)
-	std::ifstream cfg_file("config.json"); json config; cfg_file >> config;
+	std::ifstream cfg_file("config.json"); json config; cfg_file >> config; cfg_file.close();
 
 	std::string
 		url           = config["url"],
